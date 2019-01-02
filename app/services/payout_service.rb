@@ -9,7 +9,7 @@ class PayoutService
 
   def initialize(attrs)
     @new_attrs = {
-      id: attrs['id'],
+      webhook_id: attrs['id'],
       order_id: attrs['data']['orderId'],
       reference: attrs['data']['reference'],
       account: attrs['data']['account'],
