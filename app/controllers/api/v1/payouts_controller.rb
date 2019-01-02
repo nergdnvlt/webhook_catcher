@@ -1,6 +1,6 @@
 class Api::V1::PayoutsController < ApiController
   def create
-    payout = PayoutService.create(params['payout'])
+    payout = PayoutService.create(params['events'][0])
     render json: payout, status: 200
   end
 end
