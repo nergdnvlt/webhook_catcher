@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2018_12_27_162535) do
   enable_extension "plpgsql"
 
   create_table "payouts", force: :cascade do |t|
+    t.string "webhook_id"
     t.string "order_id"
     t.string "reference"
     t.string "account"

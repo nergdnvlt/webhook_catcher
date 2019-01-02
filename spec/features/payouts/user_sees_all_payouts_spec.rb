@@ -13,7 +13,6 @@ describe 'Visit /payouts' do
         expect(page).to have_content(payout.account)
         expect(page).to have_content(payout.tax)
         expect(page).to have_content(payout.tax_percentage)
-        expect(page).to have_content(payout.fastspring_fee)
         expect(page).to have_content(payout.payee)
         expect(page).to have_content(payout.subtotal)
       end
