@@ -1,5 +1,5 @@
 class PayoutsController < ApplicationController
   def index
-    @payouts = Payout.all.reverse
+    @payouts = Payout.order(updated_at: :dsc)
   end
 end
