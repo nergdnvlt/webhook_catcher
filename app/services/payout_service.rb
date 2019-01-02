@@ -9,15 +9,16 @@ class PayoutService
 
   def initialize(attrs)
     @new_attrs = {
-      order_id: attrs['orderId'],
-      reference: attrs['reference'],
-      account: attrs['account'],
-      subscriptions: attrs['subscriptions'],
-      tax: attrs['subtractions']['tax']['amount'].to_f,
-      tax_percentage: attrs['subtractions']['tax']['percentage'].to_f,
-      fastspring_fee: attrs['subtractions']['fastspring']['amount'].to_f,
-      payee: attrs['payouts'][0]['payee'],
-      subtotal: attrs['payouts'][0]['subtotal'].to_f
+      id: attrs['events'][0]['id'],
+      order_id: attrs['events'][0]['data']['orderId'],
+      reference: attrs['events'][0]['data']['reference'],
+      account: attrs['events'][0]['data']['account'],
+      subscriptions: attrs['events'][0]['data']['subscriptions'],
+      tax: attrs['events'][0]['data']['subtractions']['tax']['amount'].to_f,
+      tax_percentage: attrs['events'][0]['data']['subtractions']['tax']['percentage'].to_f,
+      fastspring_fee: attrs['events'][0]['data']['subtractions']['fastspring']['amount'].to_f,
+      payee: attrs['events'][0]['data']['payouts'][0]['payee'],
+      subtotal: attrs['events'][0]['data']['payouts'][0]['subtotal'].to_f
     }
   end
 end
