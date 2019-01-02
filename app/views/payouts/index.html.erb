@@ -3,12 +3,12 @@
 <% @payouts.each do |payout|  %>
 <h4><%= payout.order_id %></h4>
 <ul>
-  <li><%= payout.reference %></li>
-  <li><%= payout.account %></li>
-  <li><%= payout.tax %></li>
-  <li><%= payout.tax_percentage %></li>
-  <li><%= payout.fastspring_fee %></li>
-  <li><%= payout.payee %></li>
-  <li><%= payout.subtotal %></li>
+  <li>Webhook ID: <%= payout.id %></li>
+  <li>Reference: <%= payout.reference %></li>
+  <li>Account #: <%= payout.account %></li>
+  <li>Tax: <%= payout.tax %></li>
+  <li>Tax Percentage: <%= payout.tax_percentage %></li>
+  <li>Payee: <%= payout.payee %></li>
+  <li>Subtotal: <%= payout.subtotal %></li>
 </ul>
 <% end %>
