@@ -1,7 +1,7 @@
 <h1>Payouts</h1>
 
 <% @payouts.each do |payout|  %>
-<h4><%= payout.order_id %></h4>
+<h4>Order ID: <%= payout.order_id %></h4>
 <ul>
   <li>Webhook ID: <%= payout.id %></li>
   <li>Reference: <%= payout.reference %></li>
