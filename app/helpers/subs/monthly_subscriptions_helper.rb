@@ -1,0 +1,2 @@
+module Subs::MonthlySubscriptionsHelper
+end

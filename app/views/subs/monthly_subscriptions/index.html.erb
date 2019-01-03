@@ -1,0 +1,11 @@
+<h1>Monthly Subscriptions</h1>
+
+<% @subs.each do |sub| %>
+<h4>ID: <%= sub.sub_id %></h4>
+<ul>
+  <li>Active: <%= sub.active %></li>
+  <br>
+  <li>Incoming Payload: <%= sub.data %></li>
+</ul>
+<br><br>
+<% end %>
