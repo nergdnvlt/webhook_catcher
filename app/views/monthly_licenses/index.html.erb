@@ -1,8 +1,9 @@
 <h1>Licenses</h1>
 
 <% @licenses.each do |license| %>
-<h4><%= license.id %></h4>
+<h4>ID: <%= license.id %></h4>
 <ul>
-  <li><%= license.data %></li>
+  <li>Incoming Payload: <%= license.data %></li>
+  <li>Outgoing Hash: <%= license.hash %></li>
 </ul>
 <% end %>
