@@ -56,9 +56,10 @@ ActiveRecord::Schema.define(version: 2019_01_03_230633) do
   create_table "yearly_subscriptions", force: :cascade do |t|
     t.jsonb "data"
     t.string "sub_id"
-    t.boolean "active"
+    t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sub_id"], name: "index_yearly_subscriptions_on_sub_id", unique: true
   end
 
 end
