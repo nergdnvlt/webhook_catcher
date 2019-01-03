@@ -1,0 +1,2 @@
+class MonthlyLicense < ApplicationRecord
+end

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_03_184332) do
+ActiveRecord::Schema.define(version: 2019_01_03_201922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "licenses", force: :cascade do |t|
+  create_table "monthly_licenses", force: :cascade do |t|
     t.jsonb "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
