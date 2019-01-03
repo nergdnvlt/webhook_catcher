@@ -6,11 +6,11 @@ class MonthlyLicenseService
   end
 
   def create
-    MonthlyLicense.create!(data: @data, hash: @hash)
+    MonthlyLicense.create!(data: @data, license_key: @new_hash)
   end
 
   def initialize(attrs)
     @data = attrs
-    @hash = Digest::SHA2.new(256).hexdigest(attrs)
+    @new_hash = Digest::SHA2.new(256).hexdigest(attrs)
   end
 end
