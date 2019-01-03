@@ -9,12 +9,16 @@ class MonthlySubService
 
   def initialize(attrs)
     @data = {
-      order_id: attrs['order_id'],
-      quantity: attrs['quantity'],
-      internalProductName: attrs['internalProductName'],
+      subscriptionEndDate: attrs['SubscriptionEndDate'],
+      subscriptionCustomerUrl: attrs['SubscriptionCustomerUrl'],
+      subscriptionReference: attrs['SubscriptionReference'],
+      subscriptionReferrer: attrs['SubscriptionReferrer'],
+      subscriptionIsTest: attrs['SubscriptionIsTest'],
+      subscriptionQuantity: attrs['SubscriptionQuantity'],
+      security_data: attrs['security_data'],
+      security_hash: attrs['security_hash'],
       security_request_hash: attrs['security_request_hash'],
-      subscriptionReference: attrs['subscriptionReference'],
     }
-    @sub_id = attrs['subscriptionReference']
+    @sub_id = attrs['SubscriptionReference']
   end
 end
