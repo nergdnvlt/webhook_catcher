@@ -1,0 +1,2 @@
+module YearlyLicensesHelper
+end
