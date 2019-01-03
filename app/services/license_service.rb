@@ -4,7 +4,7 @@ class LicenseService
   end
 
   def create
-    Payout.create!(data: @data)
+    License.create!(data: @data)
   end
 
   def initialize(attrs)
