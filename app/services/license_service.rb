@@ -4,10 +4,10 @@ class LicenseService
   end
 
   def create
-    Payout.create!(@attrs)
+    Payout.create!(data: @data)
   end
 
   def initialize(attrs)
-    @attrs = attrs
+    @data = attrs
   end
 end
