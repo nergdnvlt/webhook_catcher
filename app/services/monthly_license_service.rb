@@ -1,10 +1,10 @@
-class LicenseService
+class MonthlyLicenseService
   def self.create(attrs)
     new(attrs).create
   end
 
   def create
-    License.create!(data: @data)
+    MonthlyLicense.create!(data: @data)
   end
 
   def initialize(attrs)
