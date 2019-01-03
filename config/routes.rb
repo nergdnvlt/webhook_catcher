@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :subs do
     # resources :monthly_subscriptions, only: [:index], as: 'monthly-subscriptions'
     get 'monthly-subscriptions', to: 'monthly_subscriptions#index'
+    get 'yearly-subscriptions', to: 'yearly_subscriptions#index'
   end
 
   namespace :api do
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 
       namespace :subs do
         post 'monthly-subscriptions', to: 'monthly_subscriptions#create'
+        post 'yearly-subscriptions', to: 'yearly_subscriptions#create'
       end
     end
   end

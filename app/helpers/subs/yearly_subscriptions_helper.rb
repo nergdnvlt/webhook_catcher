@@ -1,0 +1,2 @@
+module Subs::YearlySubscriptionsHelper
+end
