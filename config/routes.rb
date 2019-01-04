@@ -20,6 +20,7 @@ Rails.application.routes.draw do
         post 'yearly-subscriptions', to: 'yearly_subscriptions#create'
 
         get 'monthly-subscriptions/:id', to: 'monthly_subscriptions#show'
+        get 'yearly-subscriptions/:id', to: 'yearly_subscriptions#show'
 
         post 'deac-monthly-subscriptions', to: 'monthly_subscriptions#delete'
         post 'deac-yearly-subscriptions', to: 'yearly_subscriptions#delete'
