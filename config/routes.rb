@@ -18,6 +18,11 @@ Rails.application.routes.draw do
       namespace :subs do
         post 'monthly-subscriptions', to: 'monthly_subscriptions#create'
         post 'yearly-subscriptions', to: 'yearly_subscriptions#create'
+
+        get 'monthly-subscriptions/:id', to: 'monthly_subscriptions#show'
+
+        post 'deac-monthly-subscriptions', to: 'monthly_subscriptions#delete'
+        post 'deac-yearly-subscriptions', to: 'yearly_subscriptions#delete'
       end
     end
   end
