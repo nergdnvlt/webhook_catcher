@@ -11,10 +11,14 @@ class MonthlyLicenseService
 
   def initialize(attrs)
     @data = attrs
-    @new_hash = create_hash(attrs.to_s)
+    @new_hash = format_hash(attrs.to_s)
   end
 
   def create_hash(attrs)
     Digest::SHA2.new(256).hexdigest(attrs.to_s)
+  end
+
+  def format_hash(attrs)
+    create_hash(attrs).to_s[0..9]
   end
 end
